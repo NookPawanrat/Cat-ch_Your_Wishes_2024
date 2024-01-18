@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Cat-ch-Your-Wishes</title>
+
+    <link href="cath-your-wishes.css" rel="stylesheet">
+    <script crossorigin="anonymous" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="cath-your-wishes.js"></script>
+    <script src="./html2canvas.js"></script>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          referrerpolicy="no-referrer" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <div class="nav-container" id="nav-container">
+        <div class="nav-profile">
+            <a class="nav-shop nav-button" href="#product-list">Shop</a>
+            <a class="nav-button" href="#about-us">About</a>
+            <div class="nav-profile-cart" onclick="open_cart()" style="cursor: pointer">
+                <div class="nav-cart-btn">
+                    <img alt="cart-button" class="btn-cart-normal" src="./static/images/Button-Cart-Icon-Normal.png">
+                    <img alt="cart-button" class="btn-cart-hover" src="./static/images/Button-Cart-Icon-Hover.png">
+                </div>
+                <div class="cart-count count-item" id="cart-count" style="display: none">
+                    0
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--  Product container-->
+<div class="container">
+    <div class="banner">
+        <img alt="logo" src="./static/images/logo.png">
+        <div class="banner-p">
+            <p>Cat-ch Your Wishes, whatever they may be.<br>
+                Grab them into the basket. Pre-order your wishes for this year! </p>
+        </div>
+    </div>
+    <div class="step-tab-bg">
+        <img src="./static/images/step-tab.png" alt="step-tab-bg">
+    </div>
+    <div class="step-tab">
+        <h1>3 Steps Pre-order</h1>
+        <p>'Cat-ch Your Wishes'</p>
+    </div>
+    <div class="step-list">
+        <div class="step-icon">
+            <img alt="step-list-icon" id="star-1" src="./static/images/list-icon.png">
+            <img alt="step-list-icon" id="star-2" src="./static/images/list-icon.png">
+            <img alt="step-list-icon" id="star-3" src="./static/images/list-icon.png">
+        </div>
+        <div class="step-detail">
+            <p>Add ' Cat-ch Your Wishes ' to the shopping basket (as many as you like)!
+                <br>Review and confirm your pre-order list.
+                <br>Share and anticipate the arrival of your wishes, shipping to you in 2024!</p>
+        </div>
+    </div>
+
+
+    <!--  Product -->
+    <div class="product" id="product-list">
+    </div>
+
+    <!--  About us container-->
+    <div class="about-us" id="about-us">
+        <div class="about-detail">
+            <div class="about-title">
+                <div class="about-title-h1">
+                    <h1>About Us</h1>
+                </div>
+                <div class="about-title-p">
+                    <p>'Cat-ch Your Wishes' is a mini project focused on offering
+                        <br>positive encouragement as you begin the new year with a wish.
+                        <br>It's an interactive mock E-Commerce website tailored
+                        <br>for pre-ordering your desired 'products' (in this case, your wishes)
+                        <br> to be fulfilled in 2024, inspired by Japan's lucky cat Maneki Neko (招き猫) concept.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--  Contact container-->
+        <div class="contact-container" id="contact-container">
+            <div class="contact">
+                <div class="contact-card">
+                    <img alt="developer-contact"
+                         src="./static/images/Dev-Profile-2.png">
+                    <img alt="developer-img" class="profile-img"
+                         src="./static/images/Dev-image.png">
+                    <div class="contact-social">
+                        <div class="social-icon-bg">
+                            <a href="https://www.linkedin.com/in/pawanrat-santiyanon/" target="_blank">
+                                <img alt="linkedin-icon" src="./static/images/Button-Linkedin.png">
+                            </a>
+                        </div>
+                        <div class="social-icon-bg">
+                            <a href="https://github.com/NookPawanrat?tab=repositories" target="_blank">
+                                <img alt="github-icon" src="./static/images/Button-Github.png">
+                            </a>
+                        </div>
+                        <div class="social-icon-bg">
+                            <a href="mailto:pawanrat.santiyanon@gmail.com" target="_blank">
+                                <img alt="email-icon" src="./static/images/Button-Email.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <img alt="developer-contact"
+                         src="./static/images/Art-Profile-2.png">
+                    <img alt="developer-img" class="profile-img"
+                         src="./static/images/Art-image.png">
+                    <div class="contact-social">
+                        <div class="social-icon-bg">
+                            <a href="https://www.linkedin.com/in/peach-pichamon-graphicdesigner/" target="_blank">
+                                <img alt="linkedin-icon" src="./static/images/Button-Linkedin.png">
+                            </a>
+                        </div>
+                        <div class="social-icon-bg">
+                            <a href="https://www.instagram.com/restinpeachhh?igsh=OWV6cDZxOXVzNXJq&utm_source=qr"
+                               target="_blank">
+                                <img alt="ig-icon" src="./static/images/Button-IG.png">
+                            </a>
+                        </div>
+                        <div class="social-icon-bg">
+                            <a href="mailto:pichamon9940@gmail.com" target="_blank">
+                                <img alt="email-icon" src="./static/images/Button-Email.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back-to-top">
+            <a href="#nav-container">
+                <i class="fa-solid fa-angles-up"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!--  Modal Product Detail-->
+    <div class="modal" id="modal-product-detail" style="display: none;">
+        <div class="modal-bg" onclick="close_modal()"></div>
+        <div class="modal-product" id="modal-product">
+            <img alt="product-details-imag" class="modal-content-img"
+                 id="modal-img" src="#">
+            <img alt="product-details-imag" class="modal-content-img"
+                 id="modal-img-mobile" src="#">
+        </div>
+        <div class="btn-modal-product">
+            <div class="button-control button-control-modal-product">
+                <button class="button btn-close" onclick="close_modal()">
+                    Close
+                </button>
+                <button class="button btn-black" onclick="add_to_cart()">
+                    Add to Cart
+                    <img alt="cart-icon" src="./static/images/Button-Cart-Icon-Normal.png">
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  Modal Cart-->
+    <div class="modal" id="modal-cart" style="display: none;">
+        <div class="modal-bg" onclick="close_modal()"></div>
+        <div class="modal-page modal-cart">
+            <h1>Cart</h1>
+            <br>
+            <div class="cart-list" id="cart-list">
+            </div>
+            <div class="button-control">
+                <button class="button btn-close " onclick="close_modal()">Close</button>
+                <button class="button btn-red" id="confirm_order" onclick="open_confirm()">Confirm Orders</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  Modal Confirm-->
+    <div class="modal-confirm" id="confirm-page" style="display: none;">
+        <div class="cf-page-container">
+
+            <!-- Output img Start-->
+            <div class="modal-page-confirm">
+                <img alt="logo" src="./static/images/logo.png">
+                <div class="confirm-text">
+                    <h1>Confirmed!</h1>
+                    <p>Your wishes for 2024 will be on their way to you soon.</p>
+                </div>
+                <div class="cart-list cart-in-img-output">
+                    <!-- Cart list from cart modal-->
+                </div>
+                <div class="result" style="display: none">
+                </div>
+                <div class="text-ending-tab">
+                    <div class="confirm-text-ending">
+                        <h2>Cat-ch Your Wishes !</h2>
+                        <p>whatever they may be! </p>
+                        <p>Grab them into the basket.</p>
+                        <p>Pre-order your wishes for 2024.</p>
+                        <div class="star-ending">
+                            <p>&#10022;</p>
+                            <p>&#10022;</p>
+                            <p>&#10022;</p>
+                            <p>&#10022;</p>
+                            <p>&#10022;</p>
+                            <p>&#10022;</p>
+                        </div>
+                    </div>
+
+                    <div class="confirm-qr-container">
+                        <p>Try Now!</p>
+                        <div class="qr-code">
+                            <img src="./static/images/qr-code-img.png" alt="qr-code"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Output img End-->
+
+            <div class="confirm-link-container">
+                <div class="text-in-link-tab">
+                    <p>Download & Share <br> with your friends!</p>
+                </div>
+                <div class="link-tab">
+                    <div class="confirm-link-tab">
+                        <div class=" download-tab" onclick="takeScreenAndDownload()">
+                            <i class="fa-solid fa-download"></i>
+                            <p>Download*</p>
+                        </div>
+                        <div class=" share-tab" id="shareTab" onclick="takeScreenAndShare()">
+                            <div class="result"></div>
+                            <a class="a" href="#"></a>
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <p>Share**</p>
+                        </div>
+                    </div>
+                    <div class="link-note">
+                        <p id="note1">* To download, kindly open this link in your browser.</p>
+                        <br>
+                        <p id="note2">** Sharing directly to Instagram Stories is not available yet.</p>
+
+                    </div>
+                </div>
+                <div class="button-control btn-control-cf">
+                    <button class="button btn-cf btn-black" onclick="close_modal_confirm()">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----Footer------->
+    <footer>
+        <div class="footer-container"></div>
+    </footer>
+</div>
+</body>
+</html>
