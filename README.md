@@ -12,5 +12,6 @@ It's an interactive mock E-Commerce website tailored for pre-ordering your desir
 inspired by Japan's lucky cat Maneki Neko (招き猫) concept.  
 #
 "May 2024 be a year full of happy surprises, just like receiving your favorite wishes." - 🥳 
+#
 Developer:  Nook Pawanrat
-Art Director: Peach Pichamon
+/ Art Director: Peach Pichamon
