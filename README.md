@@ -6,8 +6,8 @@ Try Now!
 📌 https://users.metropolia.fi/~pawanras/wish-list-project-2023/cath-your-wishes.html
 (Smartphone device, Please open in the default browser) 
 #
-🌟 Cat-ch Your Wishes  
-is a mini project focused on offering positive encouragement as you begin the new year with a wish. 
+🌟 About this project   
+Cat-ch Your Wishes is a mini project focused on offering positive encouragement as you begin the new year with a wish. 
 It's an interactive mock E-Commerce website tailored for pre-ordering your desired 'products' (in this case, your wishes) to be fulfilled in 2024, 
 inspired by Japan's lucky cat Maneki Neko (招き猫) concept.  
 #
